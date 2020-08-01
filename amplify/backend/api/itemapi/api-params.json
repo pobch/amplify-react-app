@@ -1,0 +1,41 @@
+{
+    "paths": [
+        {
+            "name": "/item",
+            "lambdaFunction": "cryptofunction",
+            "privacy": {
+                "open": true
+            }
+        },
+        {
+            "name": "/book",
+            "lambdaFunction": "cryptofunction",
+            "privacy": {
+                "open": true
+            }
+        }
+    ],
+    "resourceName": "itemapi",
+    "apiName": "itemapi",
+    "functionArns": [
+        {
+            "lambdaFunction": "cryptofunction"
+        }
+    ],
+    "privacy": {
+        "auth": 0,
+        "unauth": 0,
+        "authRoleName": "amplify-cryptoapp-local-34553-authRole",
+        "unAuthRoleName": "amplify-cryptoapp-local-34553-unauthRole"
+    },
+    "dependsOn": [
+        {
+            "category": "function",
+            "resourceName": "cryptofunction",
+            "attributes": [
+                "Name",
+                "Arn"
+            ]
+        }
+    ]
+}
